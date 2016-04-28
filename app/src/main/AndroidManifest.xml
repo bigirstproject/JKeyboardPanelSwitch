@@ -1,0 +1,44 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.dreamtobe.kpswitch.demo">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.ChattingUnresolvedActivity"
+            android:label="@string/activity_chatting_unresolved_title"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".activity.ChattingResolvedFullScreenActivity"
+            android:label="@string/activity_chatting_fullscreen_resolved_title"
+            android:theme="@style/FullScreenTheme"
+            android:windowSoftInputMode="adjustUnspecified" />
+
+        <activity
+            android:name=".activity.ChattingResolvedActivity"
+            android:label="@string/activity_chatting_resolved_title"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".activity.TranslucentActivity"
+            android:theme="@style/TranslucentFullScreenTheme" />
+
+
+    </application>
+
+
+</manifest>

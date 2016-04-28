@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ff00ffff">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="80dip"
+            android:gravity="bottom"
+            android:text="@string/activity_main_title"
+            android:textColor="#ffff00dd" />
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:gravity="bottom"-->
+        <!--android:layout_gravity="bottom"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:orientation="vertical">-->
+
+        <include layout="@layout/view_message_list" />
+
+        <include layout="@layout/layout_send_message_bar" />
+
+        <cn.dreamtobe.kpswitch.widget.KPSwitchFSPanelLinearLayout
+            android:id="@+id/panel_root"
+            style="@style/Panel"
+            android:background="#ffffffff"
+            android:visibility="gone">
+
+            <include layout="@layout/merge_panel_content" />
+        </cn.dreamtobe.kpswitch.widget.KPSwitchFSPanelLinearLayout>
+
+        <!--</LinearLayout>-->
+
+    </FrameLayout>
+
+
+</RelativeLayout>

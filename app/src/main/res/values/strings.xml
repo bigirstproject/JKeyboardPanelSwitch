@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">JKeyBordPanelSwitch</string>
+    <string name="app_github">GITHUB</string>
+    <string name="app_github_url">https://github.com/Jacksgong/JKeyboardPanelSwitch</string>
+
+    <string name="press_say">按住说话</string>
+    <string name="site">位置</string>
+    <string name="picture">照片</string>
+    <string name="activity_main_title"><![CDATA[解决 面板<->键盘切换冲突导致 布局跳动问题]]></string>
+    <string name="activity_chatting_resolved_title">解决了切换冲突</string>
+    <string name="activity_chatting_fullscreen_resolved_title">解决了全屏切换冲突</string>
+    <string name="activity_chatting_unresolved_title">未解决切换冲突</string>
+    <string name="translucent_fullscreen_tips">透明全屏布局</string>
+</resources>
