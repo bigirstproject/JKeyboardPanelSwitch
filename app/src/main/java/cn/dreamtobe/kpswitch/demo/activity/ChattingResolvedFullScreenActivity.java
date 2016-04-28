@@ -3,6 +3,7 @@ package cn.dreamtobe.kpswitch.demo.activity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
@@ -18,6 +19,7 @@ import cn.dreamtobe.kpswitch.widget.KPSwitchFSPanelLinearLayout;
  * Created by Jacksgong on 3/26/16.
  */
 public class ChattingResolvedFullScreenActivity extends AppCompatActivity {
+    private static final String TAG = "ChattingResolvedFullScreenActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +27,12 @@ public class ChattingResolvedFullScreenActivity extends AppCompatActivity {
         setContentView(R.layout.activity_chatting_fullscreen_resolved);
         assignViews();
 
-        KeyboardUtil.attach(this, panelRoot);
+        KeyboardUtil.attach(this, panelRoot, new KeyboardUtil.OnKeyboardShowingListener() {
+            @Override
+            public void onKeyboardShowing(boolean isShowing) {
+                Log.d(TAG, String.format("Keyboard is %s", isShowing ? "showing" : "hiding"));
+            }
+        });
         KPSwitchConflictUtil.attach(panelRoot, plusIv, sendEdt);
 
         contentRyv.setOnTouchListener(new View.OnTouchListener() {
